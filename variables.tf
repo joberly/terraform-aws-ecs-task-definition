@@ -201,7 +201,7 @@ variable "resourceRequirements" {
 variable "secrets" {
   default     = []
   description = "The secrets to pass to the container"
-  type        = list(string)
+  type        = list(map(string))
 }
 
 variable "systemControls" {
