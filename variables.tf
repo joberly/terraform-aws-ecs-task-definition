@@ -216,6 +216,18 @@ variable "tags" {
   type        = map(string)
 }
 
+variable "task_cpu" {
+  default     = 0
+  description = "The number of CPU units used by the task."
+  type        = number
+}
+
+variable "task_memory" {
+  defaullt    = 0
+  description = "The amount of memory (in MiB) used by the task."
+  type        = number
+}
+
 variable "task_role_arn" {
   default     = ""
   description = "The short name or full Amazon Resource Name (ARN) of the IAM role that containers in this task can assume"

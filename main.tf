@@ -131,6 +131,8 @@ data "template_file" "container_definition" {
 resource "aws_ecs_task_definition" "ecs_task_definition" {
   container_definitions = local.container_definitions
   execution_role_arn    = var.execution_role_arn
+  cpu                   = var.task_cpu
+  memory                = var.task_memory
   family                = var.family
   ipc_mode              = var.ipc_mode
   network_mode          = var.network_mode
