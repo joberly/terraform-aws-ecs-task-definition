@@ -16,8 +16,7 @@ func minify(s string) string {
 func TestSingleContainerDefinition(t *testing.T) {
 	t.Parallel()
 	options := &terraform.Options{
-		TerraformDir: "..",
-		VarFiles:     []string{"varfile.tfvars"},
+		TerraformDir: "../examples/terraform-task-definition-single-container",
 	}
 	defer terraform.Destroy(t, options)
 	terraform.InitAndApply(t, options)

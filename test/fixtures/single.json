@@ -90,7 +90,16 @@
     "readonlyRootFilesystem": false,
     "repositoryCredentials": null,
     "resourceRequirements": null,
-    "secrets": null,
+    "secrets": [
+      {
+        "name": "EXAMPLE_PASSWORD",
+        "valueFrom": "password-parameter"
+      },
+      {
+        "name": "EXAMPLE_AUTH",
+        "valueFrom": "arn:aws:ssm:region:aws_account_id:parameter/auth-parameter"
+      }
+    ],
     "systemControls": null,
     "ulimits": [
       {
