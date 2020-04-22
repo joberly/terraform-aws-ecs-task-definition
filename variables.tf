@@ -223,7 +223,7 @@ variable "task_cpu" {
 }
 
 variable "task_memory" {
-  defaullt    = 0
+  default     = 0
   description = "The amount of memory (in MiB) used by the task."
   type        = number
 }
